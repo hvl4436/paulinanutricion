@@ -156,6 +156,20 @@ body{overflow-x:hidden}
 .nav .brand-mark{height:84px;width:89px;margin:0}
 footer .brand-mark{height:84px;width:89px}
 @media(max-width:600px){.nav{height:auto;min-height:76px}.nav .brand-mark{height:62px;width:66px;margin:0}footer .brand-mark{height:64px;width:68px}}
+/* mobile header layout */
+@media(max-width:600px){
+  header .nav{display:grid;grid-template-columns:minmax(0,1fr) auto;align-items:center;column-gap:10px;row-gap:8px;height:auto;min-height:0;padding:8px 0 10px}
+  header .nav .brand{grid-column:1;grid-row:1;order:0;flex:none;min-width:0}
+  header .nav .menu{grid-column:2;grid-row:1;order:0}
+  header .nav .nav-actions{display:contents}
+  header .header-contact{grid-column:1 / -1;grid-row:2;order:0;display:flex;flex-direction:row;flex-wrap:nowrap;align-items:center;justify-content:space-between;gap:10px;max-width:100%;padding-top:8px;border-top:1px solid var(--line)}
+  header .header-contact .phone{flex:0 0 auto;padding:9px 14px;font-size:.9rem}
+  header .header-contact .email-contact{flex:1 1 auto;min-width:0;font-size:.78rem;line-height:1.2;text-align:right;justify-content:flex-end;white-space:normal;overflow-wrap:anywhere}
+}
+/* phone in header: plain green text like the email */
+header .header-contact .phone,header .header-contact .phone:hover{background:none;border:0;box-shadow:none;border-radius:0;padding:0;transform:none;color:var(--green);font-weight:700;letter-spacing:0}
+header .header-contact .email-contact{color:var(--green);font-weight:700}
+@media(max-width:600px){header .header-contact .phone{font-size:.9rem}}
 </style>
 </head>
 <body>
